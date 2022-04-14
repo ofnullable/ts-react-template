@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkts_react_template=self.webpackChunkts_react_template||[]).push([[863],{863:function(e,t,s){s.r(t);s(294);var a=s(944);const c={name:"agvie1",styles:"h1{font-size:5rem;font-weight:600;text-align:center;}"};t.default=()=>(0,a.tZ)("div",{css:[c,"",""],children:(0,a.tZ)("h1",{className:"title",children:"Hello React!"})})}}]);
