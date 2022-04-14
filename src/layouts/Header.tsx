@@ -32,6 +32,7 @@ const headerStyle = (colors: Colors, isLight: boolean) => css`
       font-weight: bold;
       text-decoration: none;
       text-transform: uppercase;
+      color: ${colors.text};
 
       svg {
         width: 2rem;
@@ -42,7 +43,7 @@ const headerStyle = (colors: Colors, isLight: boolean) => css`
 
     svg {
       cursor: pointer;
-      color: ${isLight ? 'inherit' : colors.yellow[4]};
+      color: ${isLight ? colors.text : colors.yellow[4]};
       fill: ${colors.yellow[6]};
     }
 

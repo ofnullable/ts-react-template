@@ -7,8 +7,8 @@ import Footer from './Footer';
 
 const globalStyle = (colors: Colors) => css`
   body {
-    color: ${colors.gray[9]};
-    background: ${colors.gray[1]};
+    color: ${colors.text};
+    background: ${colors.background};
     transition-duration: 0.3s;
     transition-timing-function: ease;
     transition-property: border, background, color;

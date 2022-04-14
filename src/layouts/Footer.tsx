@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { useThemeContext } from '../contexts/ThemeContext';
+import { Colors, useThemeContext } from '../contexts/ThemeContext';
 import { ReactComponent as GithubIcon } from '../assets/github.svg';
 
 const footerStyle = css`
@@ -20,14 +20,14 @@ const footerStyle = css`
   }
 `;
 
-const iconStyle = (isLight: boolean) => css`
+const iconStyle = (colors: Colors) => css`
   width: 2rem;
   height: 2rem;
-  stroke: ${isLight ? '#000' : '#fff'};
+  stroke: ${colors.text};
 `;
 
 const Footer = () => {
-  const { isLight } = useThemeContext();
+  const { colors } = useThemeContext();
 
   return (
     <footer css={[footerStyle]}>
@@ -35,7 +35,7 @@ const Footer = () => {
         <div>{new Date().getFullYear()} &copy; your copyright</div>
         <div>
           <a href="https://github.com/ofnullable/ts-react-template" rel="noopener noreferrer" target="_blank">
-            <GithubIcon css={iconStyle(isLight)} className="github" />
+            <GithubIcon css={iconStyle(colors)} className="github" />
           </a>
         </div>
       </nav>

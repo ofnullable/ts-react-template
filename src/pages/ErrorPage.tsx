@@ -13,7 +13,6 @@ const ErrorPageStyle = (colors: Colors) => css`
   justify-content: center;
 
   h1 {
-    color: red;
     font-size: 3rem;
     font-weight: 600;
     color: ${colors.red[5]};
@@ -27,7 +26,7 @@ const ErrorPageStyle = (colors: Colors) => css`
   a {
     display: block;
     margin: 1rem auto;
-    color: ${colors.blue[5]};
+    color: ${colors.text};
   }
 
   ${media.medium} {

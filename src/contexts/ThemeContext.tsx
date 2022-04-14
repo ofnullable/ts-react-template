@@ -2,6 +2,8 @@ import React, { createContext, useCallback, useContext, useMemo, useState } from
 import { Storage } from '../common';
 
 export interface Colors {
+  text: string;
+  background: string;
   gray: string[];
   blue: string[];
   red: string[];
@@ -16,7 +18,15 @@ interface ThemeContextType {
 }
 
 const Context = createContext<ThemeContextType>({
-  colors: { gray: [], blue: [], red: [], yellow: [] },
+  colors: {
+    gray: [],
+    blue: [],
+    red: [],
+    yellow: [],
+
+    text: '#424242',
+    background: '#f5f5f5',
+  },
   theme: 'light',
   isLight: true,
   toggleTheme: () => {},
@@ -44,6 +54,8 @@ const getPreferColor = (): 'light' | 'dark' => {
 };
 
 const light = {
+  text: '#424242',
+  background: '#f5f5f5',
   gray: ['#fafafa', '#f5f5f5', '#eeeeee', '#e0e0e0', '#bdbdbd', '#9e9e9e', '#757575', '#616161', '#424242', '#212121'],
   blue: ['#e3f2fd', '#bbdefb', '#90caf9', '#64b5f6', '#42a5f5', '#2196f3', '#1e88e5', '#1976d2', '#1565c0', '#0d47a1'],
   red: ['#ffebee', '#ffcdd2', '#ef9a9a', '#e57373', '#ef5350', '#f44336', '#e53935', '#d32f2f', '#c62828', '#b71c1c'],
@@ -62,6 +74,8 @@ const light = {
 };
 
 const dark = {
+  text: '#f5f5f5',
+  background: '#424242',
   gray: [...light.gray].reverse(),
   blue: [...light.blue].reverse(),
   red: [...light.red].reverse(),
