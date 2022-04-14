@@ -1,9 +1,9 @@
 import React from 'react';
 import { css, Global } from '@emotion/react';
 
+import { Colors, useThemeContext } from '../contexts/ThemeContext';
 import Header from './Header';
 import Footer from './Footer';
-import { Colors, useThemeContext } from '../contexts/ThemeContext';
 
 const globalStyle = (colors: Colors) => css`
   body {
@@ -24,7 +24,7 @@ const globalStyle = (colors: Colors) => css`
 `;
 
 interface AppLayoutProps {
-  children: React.ReactChild | React.ReactChildren;
+  children: React.ReactChild | React.ReactChild[];
 }
 
 const AppLayout = ({ children }: AppLayoutProps) => {

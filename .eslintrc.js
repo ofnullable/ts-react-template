@@ -22,17 +22,22 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'import/resolver': {
+      typescript: {},
+    },
   },
-  plugins: ['@typescript-eslint', '@babel', 'react', 'react-hooks', 'prettier'],
+  plugins: ['@typescript-eslint', '@babel', 'react', 'react-hooks', 'prettier', 'import'],
   extends: [
     'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:import/recommended',
   ],
   rules: {
     'no-console': 1,
     'no-unused-vars': 0,
     'react/prop-types': 0,
+    'import/order': 1,
   },
 };
